@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <script>
+      function validateForm()
+      {
+        var un=document.forms["regform"]["username"].value;
+        var pw=document.forms["regform"]["password"].value;
+        if(un==null||un=="")
+{
+        alert("ERROR, username is required");
+        return false;
+}
+        else if(pw==null||pw==""){
+          alert("ERROR, password is required");
+return false;
+
+}
+alert("Successful user registration");
+}
+    </script>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <p>Welcome</p>
+    <p>Fill the form</p>
+    <div id="box" style="background:#00FF00;height:500px;width:500px;margin:6px;">
+    <form name="regform" onsubmit="return validateForm()" method="post">
+      <label for="usname">Username</label>
+        <input type="text" id=usname name="username" placeholder="Enter your username"
+<label for="passw">Password</label>
+    <input type="password" id="pasword" maxlength="15" name="password" placeholder="Enter your password">
+<button id="btn">Submit</button>
+
+
+ </form>
+        </div>
+
+  </body>
+</html>
